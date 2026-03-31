@@ -40,3 +40,12 @@ module.exports = (req, res) => {
 
   return proxy(req, res);
 };
+onProxyReq: (proxyReq, req, res) => {
+      proxyReq.setHeader('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36');
+      proxyReq.setHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8');
+      proxyReq.setHeader('Accept-Language', 'en-US,en;q=0.9');
+      proxyReq.setHeader('Sec-Fetch-Dest', 'document');
+      proxyReq.setHeader('Sec-Fetch-Mode', 'navigate');
+      proxyReq.setHeader('Sec-Fetch-Site', 'none');
+      proxyReq.setHeader('Sec-Fetch-User', '?1');
+    },
