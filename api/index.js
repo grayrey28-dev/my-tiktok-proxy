@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = (req, res) => {
   // Replace the URL below with the site you want to unblock
-  const target = "https://www.yahoo.com"; 
+  const target = "https://www.slither.io"; 
 
   const proxy = createProxyMiddleware({
     target,
